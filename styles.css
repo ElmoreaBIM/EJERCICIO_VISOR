@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+/* html,
+body {
+  overflow: hidden;
+} */
+
+#three-canvas {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+
+  outline: none;
+}
+
+#file-input {
+  z-index: 1;
+  position: absolute;
+}
+
+body {
+  font-family: "Roboto", Courier, monospace;
+  height: 100%;
+}
+h1 {
+  margin-left: 6rem;
+}
+
+header {
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+  height: 60px;
+  background-color: #da1239;
+  font-family: "Roboto", Courier, monospace;
+}
+header input {
+  visibility: hidden;
+}
+header span {
+  font-size: 50px;
+  color: white;
+  /* margin: 50px; */
+  margin-top: 20rem;
+
+  /* padding: 20px; */
+}
+body ul {
+  margin-left: 20rem;
+}
+
+#Titulo {
+  color: rgb(255, 255, 255);
+}
+#BotonOcultarMostrar {
+  margin: 50px;
+  border-radius: 10px;
+  transition: all 300ms;
+  cursor: pointer;
+
+  top: 30px;
+}
+#BotonOcultarMostrar:hover {
+  margin: 50px;
+  border-radius: 10px;
+  transition: all 300ms;
+  cursor: pointer;
+  color: red;
+
+  top: 30px;
+}
+.LogoHead {
+  margin-top: 5px;
+  margin-left: 100px;
+  width: 45px;
+  height: 45px;
+  clip-path: inset(0px 10px 0px 0px);
+}
+#NombreIFC {
+  height: 60px;
+
+  color: #da1239;
+  font-weight: bolder;
+  font-size: larger;
+}
+#TextoFijo {
+  height: 20px;
+  padding-top: 2px;
+}
+.BarraSuperior {
+  background-color: white;
+  height: 60px;
+  padding-left: 10rem;
+  margin-top: 40px;
+  margin-left: 10px;
+  border-bottom: solid 1px rgb(219, 219, 219);
+
+  position: ab;
+}
+#fila {
+  float: left;
+  width: 100%;
+}
+.container {
+  margin-top: 60px;
+  overflow: auto;
+  position: fixed;
+  width: 4rem;
+  height: 100vw;
+  background-color: white;
+
+  vertical-align: center;
+  border-right: solid 1px rgb(219, 219, 219);
+}
+#center {
+  padding-top: 40px;
+  padding-right: 20rem;
+  float: left;
+  width: 33%;
+}
+#PanelDcho {
+  padding-top: 160px;
+  overflow: auto;
+
+  /* top: auto; */
+  float: right;
+  width: 20rem;
+  height: 100vw;
+  background-color: rgb(253, 229, 229);
+  border-left: solid 1px rgb(219, 219, 219);
+}
+.MiBoton {
+  width: 20 rem;
+  height: 6rem;
+  padding: 10px;
+  background-color: white;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  text-align: center;
+  color: rgb(65, 65, 65);
+}
+
+.MiBoton:hover {
+  font-size: larger;
+  font-weight: bolder;
+  transition: all 0.1s ease-in-out;
+  transform: translateY(10px);
+  cursor: pointer;
+  color: #da1239;
+  background-color: rgb(255, 235, 235);
+}
+
+.container:hover {
+  transition: all 200ms;
+  width: 8rem;
+}
+
+.container:hover .texto1 {
+  transform: translateY(10px) translateX(0px);
+  transition: all 100ms;
+}
+.container:hover .texto2 {
+  transform: translateY(10px) translateX(0px);
+  transition: all 200ms;
+}
+.container:hover .texto3 {
+  transform: translateY(10px) translateX(0px);
+  transition: all 300ms;
+}
+.container:hover .texto4 {
+  transform: translateY(10px) translateX(0px);
+  transition: all 400ms;
+}
+.container:hover .texto5 {
+  transform: translateY(10px) translateX(0px);
+  transition: all 500ms;
+}
+.container:hover .texto6 {
+  transform: translateY(10px) translateX(0px);
+  transition: all 600ms;
+}
+.container:hover .texto7 {
+  transform: translateY(10px) translateX(0px);
+  transition: all 700ms;
+}
+.container:hover .texto8 {
+  transform: translateY(10px) translateX(0px);
+  transition: all 800ms;
+}
+.MiBoton h4 {
+  height: 5rem;
+  padding: 1px;
+  transition: all 300ms;
+  transform: translateY(14px) translateX(-110px);
+  font-size: 15px;
+}
+
+.MiBoton span {
+  font-size: 30px;
+}
+
+.MiBoton:active {
+  background-color: #da1239;
+  color: white;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* SLIDERS */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  text-align-last: right;
+  content: "zzzzzzzzzzzzzzzzzzzzz";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 16px;
+}
+
+input:checked + .slider {
+  background-color: #da1239;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #da1239;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+PanelDcho .ToogleIFCCargado {
+  margin: 120 px;
+}
+.button1 {
+  margin-left: 2rem;
+  width: 10rem;
+  height: 3rem;
+  margin-top: 10rem;
+  background-color: #da1239;
+  color: white;
+  border-radius: 6px;
+}
