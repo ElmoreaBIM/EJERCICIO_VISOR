@@ -254,6 +254,7 @@ function cast(event) {
  
   const bounds = Canvas.getBoundingClientRect();
 
+
   const x1 = event.clientX - bounds.left;
   const x2 = bounds.right - bounds.left;
   mouse.x = (x1 / x2) * 2 - 1;
@@ -264,12 +265,12 @@ function cast(event) {
 
   // Places it on the camera pointing to the mouse
   raycaster2.setFromCamera(mouse, camera);
-
+ 
   // Casts a ray
-  return raycaster2.intersectObjects(ListaIFCCargados[0]);
+  return  raycaster2.intersectObjects(ListaIFCCargados);
 }
 const output = document.getElementById("id-output");
-function pick(event) {
+async function pick(event) {
 
   const found = cast(event)[0];
   console.log(found);
@@ -278,7 +279,7 @@ function pick(event) {
       const index = found.faceIndex;
       const geometry = found.object.geometry;
       const ifc = ifcLoader.ifcManager;
-      const id = ifc.getExpressId(geometry, index);
+      const id =await ifc.getExpressId(geometry, index);
       output.innerHTML = id;
     console.log(id);
   }
