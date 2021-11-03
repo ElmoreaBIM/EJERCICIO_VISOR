@@ -87336,6 +87336,18 @@ SelectorCarpeta.onchange=(changed)=>{console.log(changed);};
  
    
 //PARA SELECCIONAR OBJETO
+
+
+new IFCLoader();
+
+// Sets up optimized picking
+ifcLoader.ifcManager.setupThreeMeshBVH(
+  computeBoundsTree,
+  disposeBoundsTree,
+  acceleratedRaycast);
+
+
+
 const raycaster2 = new Raycaster();
 raycaster2.firstHitOnly = true;
 const mouse = new Vector2();
@@ -87358,10 +87370,12 @@ function cast(event) {
   raycaster2.setFromCamera(mouse, camera);
 
   // Casts a ray
-  return raycaster2.intersectObjects(ListaIFCCargados);
+  return raycaster2.intersectObjects(ListaIFCCargados[0]);
 }
+const output = document.getElementById("id-output");
 function pick(event) {
-  const found = cast(event);
+
+  const found = cast(event)[0];
   console.log(found);
   
   if (found) {
@@ -87369,7 +87383,8 @@ function pick(event) {
       const geometry = found.object.geometry;
       const ifc = ifcLoader.ifcManager;
       const id = ifc.getExpressId(geometry, index);
+      output.innerHTML = id;
     console.log(id);
   }
 }
-Canvas.ondblclick = pick;
+window.ondblclick = pick;
